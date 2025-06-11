@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 const AgendamentoConsulta = require('../models/agendamentoConsultaModel');
 
-=======
->>>>>>> e6946231c3883c0965ebd431d754c7147162070f
 function getIndexView(req, res){
     res.render('index.html');
 }
 
-<<<<<<< HEAD
 function getAgendamentosView(req, res){
     AgendamentoConsulta.findAll().then((agendamentos)=>{
         res.render('agendamentos.html', {agendamentos});
@@ -28,22 +24,12 @@ function postAgendarConsulta(req, res){
     }
 
     
-=======
-function postAgendarConsulta(req, res){
-    let dados_consulta = req.body;
-    let campos_invalidos = validarRequisicaoAgendamentoConsulta(dados_consulta);
-    res.render('index.html', {campos_invalidos, dados_consulta});
->>>>>>> e6946231c3883c0965ebd431d754c7147162070f
 }
 
 module.exports = {
     getIndexView,
-<<<<<<< HEAD
     postAgendarConsulta,
     getAgendamentosView
-=======
-    postAgendarConsulta
->>>>>>> e6946231c3883c0965ebd431d754c7147162070f
 }
 
 function validarRequisicaoAgendamentoConsulta(dados_consulta){
